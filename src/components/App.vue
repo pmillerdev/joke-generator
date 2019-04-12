@@ -2,13 +2,14 @@
     <div id="app">
         <h3>Joke Generator</h3>
         <button class="btn btn-primary" @click="initJokes">Add Ten Random Jokes</button>
-        <button class="btn btn-primary" @click="addJoke">Add a Joke</button>
+        <button class="btn btn-success" @click="addJoke">Add a Joke</button>
         <br />
         <br />
         <div class="col-sm-12">
             <Joke
                 v-for="(joke, index) in $store.state.jokes"
                 v-bind:joke="joke"
+                v-bind:index="index"
                 v-bind:key="index"
             />
         </div>
