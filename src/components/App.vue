@@ -1,5 +1,6 @@
 <template>
     <div id="app">
-        Got Jokes?
+        Joke Generator
+        {{$store.state}}
     </div>
 </template>
