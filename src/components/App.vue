@@ -14,7 +14,8 @@
             <label>{{type}}</label>&nbsp;
         </span>
         <br />
-        <div class="col-sm-12">
+        <div class="container-fluid">
+            <div class="row">   
             <Joke
                 v-for="(joke, index) in $store.state.jokes"
                 v-show="checkedTypes.includes(joke.type)"
@@ -22,6 +23,7 @@
                 :index="index"
                 :key="index"
             />
+            </div>
         </div>
     </div>
 </template>
