@@ -33,3 +33,7 @@ export const addJoke = ({ commit }) => {
 export const removeJoke = ({ commit }, index) => {
   commit(types.REMOVE_JOKE, index);
 };
+
+export const resetJokes = ({ commit }) => {
+  commit(types.RESET_JOKES);
+};

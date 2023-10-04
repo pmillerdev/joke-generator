@@ -5,13 +5,15 @@
       Add Ten Random Jokes
     </button>
     <button class="btn btn-success" @click="addJoke">Add a Joke</button>
-    <br />
-    Filter by:
-    <span v-for="(type, index) in types" :key="index">
-      <input type="checkbox" :value="type" v-model="checkedTypes" checked />
-      <label>{{ type }}</label
-      >&nbsp;
-    </span>
+    <button class="btn btn-danger" @click="resetJokes">Reset Jokes</button>
+    <div>
+      <span>Filter by:</span>
+      <span v-for="(type, index) in types" :key="index">
+        <input type="checkbox" :value="type" v-model="checkedTypes" checked />
+        <label>{{ type }}</label
+        >&nbsp;
+      </span>
+    </div>
     <br />
     <div class="container-fluid">
       <div class="row">
@@ -30,6 +32,7 @@
 <script>
 import { mapActions } from "vuex";
 import Joke from "./Joke.vue";
+import { resetJokes } from "../store/actions";
 
 export default {
   data() {
@@ -38,7 +41,7 @@ export default {
       checkedTypes: ["Programming", "Dark", "Pun"]
     };
   },
-  methods: mapActions(["initJokes", "addJoke"]),
+  methods: mapActions(["initJokes", "addJoke", "resetJokes"]),
   components: {
     Joke
   }
