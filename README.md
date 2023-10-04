@@ -4,11 +4,7 @@ A VueJS app that allows the user to create, delete and filter jokes.
 
 Technologies used: HTML, CSS, JavaScript, Vue, Vuex, REST API, Babel, Webpack.
 
-## To Run Locally
+## Running Locally
 
-`yarn`
-`yarn dev`
-
-## Production Build
-
-`yarn build`
+1. `yarn`
+2. `yarn dev`
